@@ -1,3 +1,5 @@
+import { Cultura } from 'src/models/cultura/cultura.entity';
+import { Produtor } from 'src/models/produtor/produtor.entity';
 import { DataSource } from 'typeorm';
 
 export const databaseProviders = [
@@ -11,7 +13,7 @@ export const databaseProviders = [
         username: 'postgres',
         password: 'postgres',
         database: 'brain-ag-desafio',
-        entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+        entities: [Produtor, Cultura],
         synchronize: true, // Não usar em prod
       });
 
