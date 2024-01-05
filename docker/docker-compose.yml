@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: db
+    image: 'postgres:14.10-alpine3.18'
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+    mem_limit: 126m
