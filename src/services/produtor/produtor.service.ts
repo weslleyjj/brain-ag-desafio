@@ -11,7 +11,7 @@ export class ProdutorService {
   ) {}
 
   async findAll(): Promise<Produtor[]> {
-    return this.produtorRepository.find();
+    return this.produtorRepository.find({relations: {culturas: true}});
   }
 
   async create(produtor: ProdutorDto): Promise<Produtor> {
@@ -23,14 +23,17 @@ export class ProdutorService {
       where: {
         id: id,
       },
+      relations: {
+        culturas: true
+      }
     });
   }
 
   async update(
     id: number,
     produtorUpdated: ProdutorDto,
-  ): Promise<UpdateResult> {
-    return this.produtorRepository.update(id, { id: id, ...produtorUpdated });
+  ): Promise<Produtor> {
+    return this.produtorRepository.save(produtorUpdated);
   }
 
   async remove(id: number): Promise<Produtor> {

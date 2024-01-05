@@ -27,7 +27,7 @@ export class CulturaService {
   }
 
   async update(id: number, culturaUpdated: CulturaDto): Promise<UpdateResult> {
-    return this.culturaRepository.update(id, { id: id, ...culturaUpdated });
+    return this.culturaRepository.update(id, {nome: culturaUpdated.nome});
   }
 
   async remove(id: number): Promise<Cultura> {

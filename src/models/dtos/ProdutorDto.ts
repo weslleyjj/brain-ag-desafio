@@ -1,3 +1,5 @@
+import { Cultura } from "../cultura/cultura.entity";
+
 export interface ProdutorDto {
   id: number;
   nome: string;
@@ -7,4 +9,5 @@ export interface ProdutorDto {
   areaTotal?: number;
   areaAgricultavel?: number;
   areaDeVegetacao?: number;
+  culturas?: Cultura[];
 }
