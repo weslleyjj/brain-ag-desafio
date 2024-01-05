@@ -10,6 +10,9 @@ export class Produtor {
   nome: string;
 
   @Column()
+  documento: string; // unifica CPF ou RG
+
+  @Column()
   fazenda: string;
 
   @Column()
