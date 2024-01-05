@@ -11,6 +11,12 @@ import { DashboardController } from './controllers/dashboard.controller';
 @Module({
   imports: [],
   controllers: [ProdutorController, CulturaController, DashboardController],
-  providers: [...databaseProviders, ...produtorProviders, ...culturaProviders, ProdutorService, CulturaService],
+  providers: [
+    ...databaseProviders,
+    ...produtorProviders,
+    ...culturaProviders,
+    ProdutorService,
+    CulturaService,
+  ],
 })
 export class AppModule {}

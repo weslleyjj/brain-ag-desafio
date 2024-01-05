@@ -1,4 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
 import { Cultura } from '../cultura/cultura.entity';
 
 @Entity()
@@ -32,5 +38,5 @@ export class Produtor {
 
   @ManyToMany(() => Cultura)
   @JoinTable()
-  culturas: Cultura[]
+  culturas: Cultura[];
 }

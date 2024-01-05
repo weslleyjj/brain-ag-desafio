@@ -1,4 +1,4 @@
-import { Cultura } from "../cultura/cultura.entity";
+import { Cultura } from '../cultura/cultura.entity';
 
 export interface ProdutorDto {
   id: number;
