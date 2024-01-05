@@ -6,10 +6,11 @@ import { CulturaController } from './controllers/cultura.controller';
 import { produtorProviders } from './models/produtor/produtor.providers';
 import { databaseProviders } from './database/database.providers';
 import { culturaProviders } from './models/cultura/cultura.providers';
+import { DashboardController } from './controllers/dashboard.controller';
 
 @Module({
   imports: [],
-  controllers: [ProdutorController, CulturaController],
+  controllers: [ProdutorController, CulturaController, DashboardController],
   providers: [...databaseProviders, ...produtorProviders, ...culturaProviders, ProdutorService, CulturaService],
 })
 export class AppModule {}
