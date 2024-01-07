@@ -5,7 +5,12 @@ services:
     container_name: db
     image: 'postgres:14.10-alpine3.18'
     environment:
-      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: brain-ag-desafio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./dump-brain-ag-desafio.sql:/docker-entrypoint-initdb.d/start-api.sql
+
     ports:
       - "5432:5432"
     mem_limit: 126m
