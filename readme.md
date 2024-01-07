@@ -1,3 +1,31 @@
+### Arquivo Postman com as rotas configuradas está na raiz do projeto como: 
+brain-ag-desafio.postman_collection.json
+
+### Execução e inicialização de banco de dados da aplicação ###
+
+#### Requisitos:
+* Docker 24.0
+* Docker Compose v2.23
+
+1 - Entre na pasta do projeto (caso esteja no windows recomenda-se estar no WSL)
+
+2 - digite os comandos abaixo:
+
+```shell
+$ cd docker/
+
+$ sudo docker compose up -d db
+```
+
+Após isso o docker irá carregar a configuração descrita no compose, e irá preencher o banco de dados de acordo com o script SQL repassado para ele.
+
+Para a execução da API, seguir o readme abaixo.
+
+--------------
+Readme padrão do Nest abaixo
+
+------------------
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>

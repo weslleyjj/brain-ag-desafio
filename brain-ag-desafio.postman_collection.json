@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "8c668334-8c65-478f-ba10-92cfe757495f",
+		"name": "brain-ag-desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16677910"
+	},
+	"item": [
+		{
+			"name": "Listar produtor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/produtor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Produtor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/produtor/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Produtor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"documento\": \"111.111.111-00\",\r\n    \"nome\": \"José Crispin\",\r\n    \"fazenda\": \"Mini fazenda do orkut\",\r\n    \"cidade\": \"Paraíso\",\r\n    \"estado\": \"Céu\",\r\n    \"areaTotal\": 10000,\r\n    \"areaAgricultavel\": 4000,\r\n    \"areaDeVegetacao\": 3000,\r\n    \"culturas\": [{\r\n        \"id\": 2\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/produtor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Produtor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"José Crispin ETvaldo\",\r\n    \"fazenda\": \"Mini fazenda do orkut\",\r\n    \"cidade\": \"Paraíso\",\r\n    \"estado\": \"Céu\",\r\n    \"areaTotal\": 110000,\r\n    \"areaAgricultavel\": 4000,\r\n    \"areaDeVegetacao\": 3000,\r\n    \"culturas\": [{\r\n        \"id\": 2\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/produtor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Produtor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/produtor/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar culturas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/cultura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cultura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Cultura",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/cultura/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cultura",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Cultura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"nome\": \"Algodão\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/cultura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cultura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cultura",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2\",\r\n    \"nome\": \"Arroz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/cultura/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cultura",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Cultura",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/cultura/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"cultura",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/produtor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"produtor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
